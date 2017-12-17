@@ -121,7 +121,7 @@ public class PeopleClient{
 
 		Activity activity2 = new Activity();
 		activity2.setName("Dance");
-		activity2.setDescription("Dnace Club");
+		activity2.setDescription("Dance Club");
 		activity2.setPlace("Mumbai");
 		activity2.setType(ActivityType.SOCIAL);
 		activity2.setStartdate("2017-12-14");		
