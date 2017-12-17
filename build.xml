@@ -107,7 +107,7 @@
 	<target name="execute.evaluation" depends="compile">
 		<echo message="Executing SOAP client and response saved to client-server.log" />
 		<record name="client-server.log" emacsmode="true"	action="start"/>
-		<java classname="client.UniversityClient" classpath="${build.dir}">
+		<java classname="introsde.soap.eactivity.client.PeopleClient" classpath="${build.dir}">
 			<classpath>
 				<fileset dir="${lib.dir}">
 					<include name="**/*.jar" />
