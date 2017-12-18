@@ -208,7 +208,7 @@ public class PeopleClient{
 		System.out.println("Rating person with id = "+personid);
 		System.out.println(printActivity(updatedActivity)+ "\n");
 		Activity updatedActivity2 = people.evaluatePersonPreferences(personid, updatedActivity, 4);
-		System.out.println("The ratings are on a scale of 1 to 5");
+		System.out.println("Ratings from 1 to 5");
 		System.out.println(printActivity(updatedActivity2));
 
 
