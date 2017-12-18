@@ -21,7 +21,7 @@ For each of the requests mentioned below, send the request first with the Accept
 
 Below are the list of tasks that are implemented:
 
-    Print URL of the server you are calling (the server should be deployed on Heroku. It should be a URL of your partner student or of your own server if you work alone.
+    Step 1. Print server WSDL url (one generated for you by Heroku + e.g. /ws/people?wsdl).
 
     Step 3.1: Send Request#1 (GET BASE_URL/person). Calculate how many people are in the response. If more than 4, result is OK, else is ERROR (less than 5 persons). Save into a variable id of the first person (first_person_id) and of the last person (last_person_id).
 
