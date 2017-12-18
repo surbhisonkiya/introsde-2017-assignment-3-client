@@ -70,12 +70,11 @@ public class PeopleClient{
 
 		PeopleImplService service = new PeopleImplService();
 		People people = service.getPeopleImplPort();
-
+		people.databaseInit();
+		
 		List<Person> pList = people.readPersonList();
 
-		//people.databaseInit();
-
-
+		
 		int personid = pList.get(0).getPersonId();
 
 
@@ -84,18 +83,18 @@ public class PeopleClient{
 		//wsimport -keep http://localhost:6902/ws/people?wsdl
 
 		//Method 0
-		System.out.println("WSDL Documentation available at... "+service.getWSDLDocumentLocation());
+		System.out.println("WSDL Documentation available at: "+service.getWSDLDocumentLocation());
 
 		//Method 1
 		
-		System.out.println("\nMethod #1 | readPersonList\n");
+		System.out.println("\nMethod #1 | readPersonList()\n");
 		for (int i=0;i<pList.size();i++) {
 			System.out.println("Person: "+(i+1));
 			System.out.println(printPerson(pList.get(i)));
 			System.out.println("");
 		}
 		//Method 2
-		System.out.println("\nMethod #2 | readPerson");		
+		System.out.println("\nMethod #2 | readPerson(int personid)");		
 		System.out.println("Person with person ID = "+personid + "\n");
 		Person person = people.readPerson(personid);
 		System.out.println(printPerson(person));
@@ -104,7 +103,7 @@ public class PeopleClient{
 		person.setLastName("Tadimeti");
 
 		//Method 3
-		System.out.println("\nMethod #3 | updatePerson");
+		System.out.println("\nMethod #3 | updatePerson(Person person)");
 		System.out.println("Updated person = "+printPerson(person) + "\n");
 		int updatedId = people.updatePerson(person);
 		System.out.println("Person with id="+ updatedId + " has been updated.");
@@ -134,7 +133,7 @@ public class PeopleClient{
 		personNew.getActivityPreferences().add(activity2);
 
 		//Method 4
-		System.out.println("\nMethod #4 | createPerson");
+		System.out.println("\nMethod #4 | createPerson(Person person)");
 		System.out.println("New person created"+"\n");
 		System.out.println(printPerson(personNew) + "\n");
 		Person newPerson = people.createPerson(personNew);
@@ -142,7 +141,7 @@ public class PeopleClient{
 		System.out.println("Person with id = "+ createdId + " has been created");
 
 		//Method 5
-		System.out.println("\nMethod #5 | deletePerson");
+		System.out.println("\nMethod #5 | deletePerson(int personid)");
 		boolean success = people.deletePerson(createdId);
 		if (success) {
 			System.out.println("Person with id="+ createdId + " has been deleted.");
@@ -151,7 +150,7 @@ public class PeopleClient{
 		}
 
 		//Method 6
-		System.out.println("\nMethod #6 | readPersonPreferences\n");
+		System.out.println("\nMethod #6 | readPersonPreferences(int personid, String activityType)\n");
 		System.out.println("Reading activities of person with id = "+personid);
 		System.out.println("activityType=Sport \n");
 		List<Activity> activitiesWithType = people.readPersonPreferences(personid, "SPORT");
@@ -162,7 +161,7 @@ public class PeopleClient{
 		}
 
 		//Method 7
-		System.out.println("\nMethod #7 | readPreferences\n");
+		System.out.println("\nMethod #7 | readPreferences()\n");
 		List<Activity> all_activities = people.readPreferences();
 		for (int i=0;i<all_activities.size();i++) {
 			System.out.println("Activity: "+(i+1));
@@ -171,13 +170,13 @@ public class PeopleClient{
 		}
 
 		//Method 8
-		System.out.println("\nMethod #8 | readPersonPreferencesWithId\n");
+		System.out.println("\nMethod #8 | readPersonPreferencesWithId(int personid, int activityId)\n");
 		System.out.println("person id="+personid+" and activity id=" + activityId+ "\n");
 		Activity activityWithId = people.readPersonPreferencesWithId(personid, activityId);
 		System.out.println(printActivity(activityWithId));
 
 		//Method 9
-		System.out.println("\nMethod #9 | savePersonPreferences\n");
+		System.out.println("\nMethod #9 | savePersonPreferences(int personid, Activity activity)\n");
 		System.out.println("person id = "+personid);
 		Activity activity3 =  new Activity();
 		activity3.setName("Party");
@@ -191,7 +190,7 @@ public class PeopleClient{
 		System.out.println("Activity added to person id = " +personid+ " and activity id = " + newActivity.getActivityId());
 
 		//Method 10
-		System.out.println("\nMethod #10 | updatePersonPreferences\n");
+		System.out.println("\nMethod #10 | updatePersonPreferences(int personid, Activity activity)\n");
 		System.out.println("Updating person with id = "+personid);
 		Activity activity4 =  new Activity();
 		activity4.setName("Sing");
@@ -205,24 +204,13 @@ public class PeopleClient{
 		System.out.println(printActivity(updatedActivity));
 
 		//Method 11
-		System.out.println("\nMethod #11 | evaluatePersonPreferences\n");		
+		System.out.println("\nMethod #11 | evaluatePersonPreferences(int personid, Activity activity, int value)\n");		
 		System.out.println("Rating person with id = "+personid);
 		System.out.println(printActivity(updatedActivity)+ "\n");
 		Activity updatedActivity2 = people.evaluatePersonPreferences(personid, updatedActivity, 4);
 		System.out.println("The ratings are on a scale of 1 to 5");
 		System.out.println(printActivity(updatedActivity2));
 
-		/*	//Method 12
-		System.out.println("\nMethod #12 | getBestPersonPreference\n");
-		System.out.println("Reading Person's best rated activities with...");
-		System.out.println("personid="+personid+"\n");
-		List<Activity> bestActivities = people.getBestPersonPreference(personid);
-
-		for (int i=0;i<bestActivities.size();i++) {
-			System.out.println("Activity #"+(i+1));
-			System.out.println(printActivity(bestActivities.get(i)));
-			System.out.println("");
-		}*/
 
 	}
 
