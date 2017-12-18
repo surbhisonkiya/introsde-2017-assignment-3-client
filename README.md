@@ -6,18 +6,18 @@ Email-id: surbhi.sonkiya@studenti.unitn.it
 
 Worked Alone.
 
-Server URL: https://activityperson.herokuapp.com/
+Server URL: https://studentactivity.herokuapp.com/ws/people?wsdl
 
 Server github repository: https://github.com/surbhisonkiya/introsde-2017-assignment-3-server.git
 Project:
 
-The project provides the implementation of the system for the Univeristy to understand the preferences of their students, that can help them register students and their preferred activities. The system is capable of storing firstname, lastname, birthdate of the students and name, description, type of activity, place, start date/time about the activity preferred by the student. The University can add, read, modify and delete the information via Web (REST Services). Additionally, the results are saved in a database.
+The project provides the implementation of the system for the Univeristy to understand the preferences of their students, that can help them register students and their preferred activities. The system is capable of storing firstname, lastname, birthdate of the students and name, description, type of activity, place, start date/time about the activity preferred by the student. The University can add, read, modify and delete the information via Web (SOAP Services). Additionally, the results are saved in a database.
 
 About the code:
 
-The system supports the output of the application in XML and JSON.
+The system supports the output of the application in XML.
 
-For each of the requests mentioned below, send the request first with the Accept and Content-type (for POST/PUT requests) headers both set to Application/XML and then both set to Application/JSON. After receiving the response, the output is printed in the console. Also, output of Application/XML is recorded in a file named "client-server-xml.log" and output of Application/JSON is recorded in a file named "client-server-json.log".
+For each of the requests mentioned below, send the request first with the Accept and Content-type (for POST/PUT requests) headers both set to Application/XML. After receiving the response, the output is printed in the console. Also, output of Application/XML is recorded in a file named "client-server.log".
 
 Below are the list of tasks that are implemented:
 
