@@ -3,13 +3,20 @@ WSDL Documentation available at: https://studentactivity.herokuapp.com/ws/people
 Method #1 | readPersonList()
 
 Person: 1
-Person [Id = 1, FirstName = Nandini, LastName = Tadimeti, BirthDate = 2017-10-10,(
+Person [Id = 1, FirstName = Surbhi, LastName = Sonkiya, BirthDate = 2017-10-10,(
 Activity
-{Id = 19, Name = Party, 
- Description = Get together with family friends, 
- Place=Goa, 
- Type = SOCIAL, 
- startDate = 2017-10-08, 
+{Id = 2, Name = Squash, 
+ Description = Squash Court in Sanbapolis, 
+ Place=Trento, 
+ Type = SPORT, 
+ startDate = 2017-12-10, 
+ Rating = NA},
+Activity
+{Id = 3, Name = Jogging, 
+ Description = Jogging on Golden Gate Bridge, 
+ Place=San Francisco, 
+ Type = SPORT, 
+ startDate = 2017-10-04, 
  Rating = NA})]
 
 Person: 2
@@ -80,112 +87,41 @@ Activity
  startDate = 2016-08-27, 
  Rating = NA})]
 
-Person: 6
-Person [Id = 20, FirstName = Surbhi, LastName = Sonkiya, BirthDate = 2017-10-10,(
+
+Method #2 | readPerson(int personid)
+Person with person ID = 1
+
+Person [Id = 1, FirstName = Surbhi, LastName = Sonkiya, BirthDate = 2017-10-10,(
 Activity
-{Id = 21, Name = Squash, 
+{Id = 2, Name = Squash, 
  Description = Squash Court in Sanbapolis, 
  Place=Trento, 
  Type = SPORT, 
  startDate = 2017-12-10, 
  Rating = NA},
 Activity
-{Id = 22, Name = Jogging, 
+{Id = 3, Name = Jogging, 
  Description = Jogging on Golden Gate Bridge, 
  Place=San Francisco, 
  Type = SPORT, 
  startDate = 2017-10-04, 
  Rating = NA})]
 
-Person: 7
-Person [Id = 23, FirstName = Rohit, LastName = Prakash, BirthDate = 2016-12-1,(
-Activity
-{Id = 24, Name = Dance, 
- Description = Salsa dance classes, 
- Place=Madrid, 
- Type = CULTURE, 
- startDate = 2016-11-07, 
- Rating = NA},
-Activity
-{Id = 25, Name = Workshop, 
- Description = Design Thinking Workshop, 
- Place=Jaipur, 
- Type = WORK, 
- startDate = 2016-08-14, 
- Rating = NA})]
-
-Person: 8
-Person [Id = 26, FirstName = Parul, LastName = Jain, BirthDate = 2017-10-18,(
-Activity
-{Id = 27, Name = Culture class, 
- Description = Learn italian culture in CLA, 
- Place=Trento, 
- Type = CULTURE, 
- startDate = 2017-06-13, 
- Rating = NA},
-Activity
-{Id = 28, Name = Yoga, 
- Description = Yoga Teacher Training Program, 
- Place=Mysore, 
- Type = SPORT, 
- startDate = 2017-09-26, 
- Rating = NA})]
-
-Person: 9
-Person [Id = 29, FirstName = Hari, LastName = Jhawar, BirthDate = 2017-07-15,(
-Activity
-{Id = 30, Name = Party, 
- Description = Friends get-togther, 
- Place=Sanbapolis, 
- Type = SOCIAL, 
- startDate = 2017-05-26, 
- Rating = NA},
-Activity
-{Id = 31, Name = Team Meeting, 
- Description = Discuss about the project, 
- Place=Mysore, 
- Type = WORK, 
- startDate = 2016-01-13, 
- Rating = NA})]
-
-Person: 10
-Person [Id = 32, FirstName = Renu, LastName = Jhalani, BirthDate = 2016-11-05,(
-Activity
-{Id = 33, Name = Trekking, 
- Description = Mountain trekking and rock climbing, 
- Place=Shimla, 
- Type = SPORT, 
- startDate = 2017-03-19, 
- Rating = NA},
-Activity
-{Id = 34, Name = Travelling, 
- Description = Visit historical places in the country, 
- Place=Italy, 
- Type = TRAVEL, 
- startDate = 2016-08-27, 
- Rating = NA})]
-
-
-Method #2 | readPerson(int personid)
-Person with person ID = 1
-
-Person [Id = 1, FirstName = Nandini, LastName = Tadimeti, BirthDate = 2017-10-10,(
-Activity
-{Id = 19, Name = Party, 
- Description = Get together with family friends, 
- Place=Goa, 
- Type = SOCIAL, 
- startDate = 2017-10-08, 
- Rating = NA})]
-
 Method #3 | updatePerson(Person person)
 Updated person = Person [Id = 1, FirstName = Nandini, LastName = Tadimeti, BirthDate = 2017-10-10,(
 Activity
-{Id = 19, Name = Party, 
- Description = Get together with family friends, 
- Place=Goa, 
- Type = SOCIAL, 
- startDate = 2017-10-08, 
+{Id = 2, Name = Squash, 
+ Description = Squash Court in Sanbapolis, 
+ Place=Trento, 
+ Type = SPORT, 
+ startDate = 2017-12-10, 
+ Rating = NA},
+Activity
+{Id = 3, Name = Jogging, 
+ Description = Jogging on Golden Gate Bridge, 
+ Place=San Francisco, 
+ Type = SPORT, 
+ startDate = 2017-10-04, 
  Rating = NA})]
 
 Person with id=1 has been updated.
@@ -209,10 +145,10 @@ Activity
  startDate = 2017-12-14, 
  Rating = NA})]
 
-Person with id = 35 has been created
+Person with id = 16 has been created
 
 Method #5 | deletePerson(int personid)
-Person with id=35 has been deleted.
+Person with id=16 has been deleted.
 
 Method #6 | readPersonPreferences(int personid, String activityType)
 
@@ -235,24 +171,14 @@ Activity
 Activity: 2
 
 Activity
-{Id = 3, Name = Sing, 
- Description = Singing in party, 
- Place=Bangalore, 
- Type = SOCIAL, 
- startDate = 2017-12-09, 
- Rating = 4/5}
-
-Activity: 3
-
-Activity
-{Id = 5, Name = Dance, 
- Description = Salsa dance classes, 
- Place=Madrid, 
- Type = CULTURE, 
- startDate = 2016-11-07, 
+{Id = 3, Name = Jogging, 
+ Description = Jogging on Golden Gate Bridge, 
+ Place=San Francisco, 
+ Type = SPORT, 
+ startDate = 2017-10-04, 
  Rating = NA}
 
-Activity: 4
+Activity: 3
 
 Activity
 {Id = 6, Name = Workshop, 
@@ -260,6 +186,16 @@ Activity
  Place=Jaipur, 
  Type = WORK, 
  startDate = 2016-08-14, 
+ Rating = NA}
+
+Activity: 4
+
+Activity
+{Id = 5, Name = Dance, 
+ Description = Salsa dance classes, 
+ Place=Madrid, 
+ Type = CULTURE, 
+ startDate = 2016-11-07, 
  Rating = NA}
 
 Activity: 5
@@ -285,16 +221,6 @@ Activity
 Activity: 7
 
 Activity
-{Id = 12, Name = Team Meeting, 
- Description = Discuss about the project, 
- Place=Mysore, 
- Type = WORK, 
- startDate = 2016-01-13, 
- Rating = NA}
-
-Activity: 8
-
-Activity
 {Id = 11, Name = Party, 
  Description = Friends get-togther, 
  Place=Sanbapolis, 
@@ -302,17 +228,17 @@ Activity
  startDate = 2017-05-26, 
  Rating = NA}
 
-Activity: 9
+Activity: 8
 
 Activity
-{Id = 14, Name = Trekking, 
- Description = Mountain trekking and rock climbing, 
- Place=Shimla, 
- Type = SPORT, 
- startDate = 2017-03-19, 
+{Id = 12, Name = Team Meeting, 
+ Description = Discuss about the project, 
+ Place=Mysore, 
+ Type = WORK, 
+ startDate = 2016-01-13, 
  Rating = NA}
 
-Activity: 10
+Activity: 9
 
 Activity
 {Id = 15, Name = Travelling, 
@@ -322,128 +248,28 @@ Activity
  startDate = 2016-08-27, 
  Rating = NA}
 
-Activity: 11
+Activity: 10
 
 Activity
-{Id = 19, Name = Party, 
- Description = Get together with family friends, 
- Place=Goa, 
- Type = SOCIAL, 
- startDate = 2017-10-08, 
- Rating = NA}
-
-Activity: 12
-
-Activity
-{Id = 22, Name = Jogging, 
- Description = Jogging on Golden Gate Bridge, 
- Place=San Francisco, 
- Type = SPORT, 
- startDate = 2017-10-04, 
- Rating = NA}
-
-Activity: 13
-
-Activity
-{Id = 21, Name = Squash, 
- Description = Squash Court in Sanbapolis, 
- Place=Trento, 
- Type = SPORT, 
- startDate = 2017-12-10, 
- Rating = NA}
-
-Activity: 14
-
-Activity
-{Id = 25, Name = Workshop, 
- Description = Design Thinking Workshop, 
- Place=Jaipur, 
- Type = WORK, 
- startDate = 2016-08-14, 
- Rating = NA}
-
-Activity: 15
-
-Activity
-{Id = 24, Name = Dance, 
- Description = Salsa dance classes, 
- Place=Madrid, 
- Type = CULTURE, 
- startDate = 2016-11-07, 
- Rating = NA}
-
-Activity: 16
-
-Activity
-{Id = 27, Name = Culture class, 
- Description = Learn italian culture in CLA, 
- Place=Trento, 
- Type = CULTURE, 
- startDate = 2017-06-13, 
- Rating = NA}
-
-Activity: 17
-
-Activity
-{Id = 28, Name = Yoga, 
- Description = Yoga Teacher Training Program, 
- Place=Mysore, 
- Type = SPORT, 
- startDate = 2017-09-26, 
- Rating = NA}
-
-Activity: 18
-
-Activity
-{Id = 30, Name = Party, 
- Description = Friends get-togther, 
- Place=Sanbapolis, 
- Type = SOCIAL, 
- startDate = 2017-05-26, 
- Rating = NA}
-
-Activity: 19
-
-Activity
-{Id = 31, Name = Team Meeting, 
- Description = Discuss about the project, 
- Place=Mysore, 
- Type = WORK, 
- startDate = 2016-01-13, 
- Rating = NA}
-
-Activity: 20
-
-Activity
-{Id = 33, Name = Trekking, 
+{Id = 14, Name = Trekking, 
  Description = Mountain trekking and rock climbing, 
  Place=Shimla, 
  Type = SPORT, 
  startDate = 2017-03-19, 
  Rating = NA}
 
-Activity: 21
-
-Activity
-{Id = 34, Name = Travelling, 
- Description = Visit historical places in the country, 
- Place=Italy, 
- Type = TRAVEL, 
- startDate = 2016-08-27, 
- Rating = NA}
-
 
 Method #8 | readPersonPreferencesWithId(int personid, int activityId)
 
-person id=1 and activity id=19
+person id=1 and activity id=2
 
 
 Activity
-{Id = 19, Name = Party, 
- Description = Get together with family friends, 
- Place=Goa, 
- Type = SOCIAL, 
- startDate = 2017-10-08, 
+{Id = 2, Name = Squash, 
+ Description = Squash Court in Sanbapolis, 
+ Place=Trento, 
+ Type = SPORT, 
+ startDate = 2017-12-10, 
  Rating = NA}
 
 Method #9 | savePersonPreferences(int personid, Activity activity)
@@ -458,7 +284,7 @@ Activity
  startDate = 2017-10-08, 
  Rating = NA}
 
-Activity added to person id = 1 and activity id = 38
+Activity added to person id = 1 and activity id = 19
 
 Method #10 | updatePersonPreferences(int personid, Activity activity)
 
