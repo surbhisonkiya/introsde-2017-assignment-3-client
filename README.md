@@ -56,13 +56,13 @@ Execution:
 
     Client github repository: https://github.com/surbhisonkiya/introsde-2017-assignment-2-client.git
 
-    2. In the terminal, navigate to the path where you have cloned the repository on your local machine.
+    2. In the terminal, navigate to the path where you have cloned the repository on your local machine. Go inside 'src' folder.
 
     3. Execute below command in the terminal -
 
       wsimport -keep https://studentactivity.herokuapp.com/ws/people?wsdl
       
-     4. Execute below command in the terminal -
+     4. Navigate out of 'src' folder and Execute below command in the terminal -
      
      ant execute.client
 
